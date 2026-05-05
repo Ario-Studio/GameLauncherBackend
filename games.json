@@ -4,6 +4,6 @@
     "name": "My First Game",
     "version": "1.0",
     "exe": "Game.exe",
-    "downloadUrl": "https://raw.githubusercontent.com/USERNAME/REPO/main/games/game1.zip"
+    "downloadUrl": "https://github.com/Ario-Studio/GameLauncherBackend/blob/main/alpha-prototype.zip"
   }
 ]
