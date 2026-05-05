@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://b4ng5krqx2rua"]
+
+[ext_resource type="Script" uid="uid://upcjldyii21v" path="res://scenes/main_menu.gd" id="1_5a6dn"]
+[ext_resource type="PackedScene" uid="uid://bpaacvjgj7u16" path="res://scenes/player.tscn" id="1_5hgee"]
+[ext_resource type="PackedScene" uid="uid://dm8fbgsprfxts" path="res://scenes/non-play object1.tscn" id="2_xsilq"]
+[ext_resource type="PackedScene" uid="uid://cmlq2whhe6il1" path="res://assets/object01.fbx" id="3_vsw8r"]
+[ext_resource type="PackedScene" uid="uid://bv0t4bnix5ee7" path="res://assets/alpha prototype logo.glb" id="4_km7eu"]
+[ext_resource type="FontFile" uid="uid://dpnnxyl47a5yc" path="res://assets/NotoSansChorasmian-Regular.ttf" id="5_km7eu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5a6dn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uqkwj"]
+material = SubResource("StandardMaterial3D_5a6dn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ljdde"]
+albedo_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5hgee"]
+material = SubResource("StandardMaterial3D_ljdde")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oy07q"]
+albedo_color = Color(0.38431373, 0.8627451, 0.8666667, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_12vek"]
+material = SubResource("StandardMaterial3D_oy07q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1qw6"]
+albedo_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_km7eu"]
+material = SubResource("StandardMaterial3D_c1qw6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fak3k"]
+albedo_color = Color(1, 1, 0.38039216, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_vsw8r"]
+material = SubResource("StandardMaterial3D_fak3k")
+
+[sub_resource type="Animation" id="Animation_km7eu"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D7:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.786564, 2.6517413, -4.005337)]
+}
+
+[sub_resource type="Animation" id="Animation_5a6dn"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D7:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4333334, 5.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-4.786564, 2.6517413, -4.005337), Vector3(-4.787, 2.872, -4.005), Vector3(-4.787, 2.652, -4.005)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ljdde"]
+_data = {
+&"RESET": SubResource("Animation_km7eu"),
+&"new_animation": SubResource("Animation_5a6dn")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xsilq"]
+size = Vector3(16.728271, 1, 16.86621)
+
+[sub_resource type="Animation" id="Animation_xsilq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.4502368, 0.5355637, -3.8395472)]
+}
+
+[sub_resource type="Animation" id="Animation_12vek"]
+resource_name = "new_animation"
+length = 1.02
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2.45, 0.751, -3.84), Vector3(2.45, -0.759, -3.84)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vsw8r"]
+_data = {
+&"RESET": SubResource("Animation_xsilq"),
+&"new_animation": SubResource("Animation_12vek")
+}
+
+[sub_resource type="Animation" id="Animation_4w47j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/play:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/play:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gb4fi"]
+resource_name = "new_animation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/play:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/play:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 0), Vector2(54.56, -28.41), Vector2(-0.9999924, -3.8146973e-06)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ioeen"]
+_data = {
+&"RESET": SubResource("Animation_4w47j"),
+&"new_animation": SubResource("Animation_gb4fi")
+}
+
+[node name="Node3D" type="Node3D" unique_id=669087920]
+script = ExtResource("1_5a6dn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=322994896]
+transform = Transform3D(6.8158975, 0, 0, 0, 1, 0, 0, 0, 6.7616735, 0, 0, 0)
+mesh = SubResource("PlaneMesh_uqkwj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=521836882]
+transform = Transform3D(14.975894, 0, 0, 0, 46.041996, 0, 0, 0, 1, 0, 0, -7.073398)
+mesh = SubResource("BoxMesh_5hgee")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=194082002]
+transform = Transform3D(-6.5461705e-07, 0, -0.99999994, 0, 40.842957, 0, 14.975893, 0, -4.3711385e-08, -6.9080467, 0, 0.13815832)
+mesh = SubResource("BoxMesh_5hgee")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=613280779]
+transform = Transform3D(0.76099503, 0, 0.6487577, 0, 1, 0, -0.6487577, 0, 0.76099503, 2.4628534, 2.026918, 2.9028373)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=850749222]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.2731953, 0)
+light_color = Color(0, 0, 0.69411767, 1)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=296071537]
+transform = Transform3D(1.1300437, 0, 0, 0, 1.2010326, 0, 0, 0, 1.1253905, -5.142602, 0, -0.7076453)
+mesh = SubResource("CylinderMesh_12vek")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=90166817]
+transform = Transform3D(12.044232, 0, 0, 0, 4.6229415, 0, 0, 0, 3.0626004, -2.365747, 0, -4.0247593)
+mesh = SubResource("PrismMesh_km7eu")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=982248599]
+transform = Transform3D(0.30414647, 0, 0, 0, 0.3322197, 0, 0, 0, 0.31108588, -4.786564, 2.6517413, -4.005337)
+mesh = SubResource("SphereMesh_vsw8r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=124804089]
+libraries/ = SubResource("AnimationLibrary_ljdde")
+autoplay = &"new_animation"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1204552115]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=59063895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3900146, -0.49175704, -1.0854492)
+shape = SubResource("BoxShape3D_xsilq")
+
+[node name="CharacterBody3D" parent="." unique_id=1679335475 instance=ExtResource("1_5hgee")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0011423, 0)
+
+[node name="Node3D" parent="." unique_id=129411959 instance=ExtResource("2_xsilq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4502368, 0.5355637, -3.8395472)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=1579490992]
+libraries/ = SubResource("AnimationLibrary_vsw8r")
+autoplay = &"new_animation"
+
+[node name="object01" parent="." unique_id=237401819 instance=ExtResource("3_vsw8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5635567, 5951.2695, -3.4132423)
+
+[node name="alpha prototype logo" parent="." unique_id=426682271 instance=ExtResource("4_km7eu")]
+transform = Transform3D(12.411701, 0, 1.8105931, 0, 9.7308, 0, -8.435301, 0, 2.6641068, 0.5032753, 1.9509904, -0.65023494)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=248411350]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.7473407, 3.6331434, -1.5880974e-07)
+
+[node name="Control" type="Control" parent="." unique_id=1773815659]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="play" type="Button" parent="Control" unique_id=1053100029]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 284.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("5_km7eu")
+text = "play"
+
+[node name="exit" type="Button" parent="Control" unique_id=2032118707]
+layout_mode = 0
+offset_left = 867.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 117.0
+
+[node name="play2" type="Label" parent="Control" unique_id=282416992]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 15.0
+offset_right = 187.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("5_km7eu")
+theme_override_font_sizes/font_size = 60
+text = "play"
+
+[node name="exit2" type="Label" parent="Control" unique_id=2024880431]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 19.0
+offset_right = 1043.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 60
+text = "exit"
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="." unique_id=289712703]
+libraries/ = SubResource("AnimationLibrary_ioeen")
+autoplay = &"new_animation"
+
+[connection signal="pressed" from="Control/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/exit" to="." method="_on_exit_pressed"]

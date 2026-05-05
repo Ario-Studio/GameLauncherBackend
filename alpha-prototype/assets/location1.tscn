@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bpemiw7dvevyp"]
+
+[ext_resource type="PackedScene" uid="uid://o2c8ivf46ddc" path="res://scenes/house1.tscn" id="1_utj8k"]
+[ext_resource type="PackedScene" uid="uid://bpaacvjgj7u16" path="res://scenes/player.tscn" id="2_3njfa"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6jox3"]
+size = Vector2(150, 150)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_utj8k"]
+size = Vector3(357.43695, 0.53125, 146.69318)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3njfa"]
+size = Vector3(70.690186, 138.95967, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1939754321]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1259021401]
+transform = Transform3D(74.85017, 0, 0, 0, 1, 0, 0, 0, 51.097263, 0, 0, 0)
+mesh = SubResource("PlaneMesh_6jox3")
+
+[node name="Node3D" parent="." unique_id=761286404 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.595695, 0, -62.744442)
+
+[node name="Node3D2" parent="." unique_id=1516881349 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.333073, 0, -62.744442)
+
+[node name="Node3D3" parent="." unique_id=1957184217 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.99398, 0, -62.744442)
+
+[node name="Node3D4" parent="." unique_id=1593575843 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.92274, 0, -62.744442)
+
+[node name="Node3D5" parent="." unique_id=2130879659 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.595695, 0, 138.62405)
+
+[node name="Node3D6" parent="." unique_id=1101638854 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.333073, 0, 138.62405)
+
+[node name="Node3D7" parent="." unique_id=959246431 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.99398, 0, 138.62405)
+
+[node name="Node3D8" parent="." unique_id=678613121 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.92274, 0, 138.62405)
+
+[node name="Node3D9" parent="." unique_id=1368943398 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.26458, 0, 6.071903)
+
+[node name="Node3D10" parent="." unique_id=304024348 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.26458, 0, 72.86754)
+
+[node name="Node3D11" parent="." unique_id=1960993322 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237.56897, 0, 6.071903)
+
+[node name="Node3D12" parent="." unique_id=185075724 instance=ExtResource("1_utj8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237.56897, 0, 75.62186)
+
+[node name="CharacterBody3D" parent="." unique_id=1679335475 instance=ExtResource("2_3njfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3059591, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1179866234]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1226875182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.21695, -0.234375, 1.7659607)
+shape = SubResource("BoxShape3D_utj8k")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1830770344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.845093, 68.979836, -62.48171)
+shape = SubResource("BoxShape3D_3njfa")
+debug_color = Color(1, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1367665322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.19849, 68.979836, -62.48171)
+shape = SubResource("BoxShape3D_3njfa")
+debug_color = Color(1, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=103376814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.845093, 68.979836, 68.07511)
+shape = SubResource("BoxShape3D_3njfa")
+debug_color = Color(1, 0.6, 0.69803923, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=81696242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.85204, 68.979836, 68.07511)
+shape = SubResource("BoxShape3D_3njfa")
+debug_color = Color(1, 0.6, 0.69803923, 1)

@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bo0l5igxay5he"]
+
+[ext_resource type="PackedScene" uid="uid://bpaacvjgj7u16" path="res://scenes/player.tscn" id="1_wjef0"]
+[ext_resource type="PackedScene" uid="uid://dm8fbgsprfxts" path="res://scenes/non-play object1.tscn" id="2_6rjn1"]
+[ext_resource type="Script" uid="uid://dt28oerorrgot" path="res://scripts/button.gd" id="3_6rjn1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqkwj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oap31"]
+material = SubResource("StandardMaterial3D_uqkwj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hgee"]
+albedo_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hfu60"]
+material = SubResource("StandardMaterial3D_5hgee")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsilq"]
+albedo_color = Color(0.38431373, 0.8627451, 0.8666667, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_75rjn"]
+material = SubResource("StandardMaterial3D_xsilq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsw8r"]
+albedo_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_upoyc"]
+material = SubResource("StandardMaterial3D_vsw8r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12vek"]
+albedo_color = Color(1, 1, 0.38039216, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_6sf10"]
+material = SubResource("StandardMaterial3D_12vek")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g8808"]
+size = Vector3(16.728271, 1, 16.86621)
+
+[node name="Node3D" type="Node3D" unique_id=1285325986]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=821139518]
+transform = Transform3D(6.8158975, 0, 0, 0, 1, 0, 0, 0, 6.7616735, 0, 0, 0)
+mesh = SubResource("PlaneMesh_oap31")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=770928609]
+transform = Transform3D(14.975894, 0, 0, 0, 46.041996, 0, 0, 0, 1, 0, 0, -7.073398)
+mesh = SubResource("BoxMesh_hfu60")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=425195736]
+transform = Transform3D(-6.5461705e-07, 0, -0.99999994, 0, 40.842957, 0, 14.975893, 0, -4.3711385e-08, -6.9080467, 0, 0.13815832)
+mesh = SubResource("BoxMesh_hfu60")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2066573316]
+transform = Transform3D(0.76099503, 0, 0.6487577, 0, 1, 0, -0.6487577, 0, 0.76099503, 2.4628534, 2.026918, 2.9028373)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=146712116]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.2731953, 0)
+light_color = Color(0, 0, 0.69411767, 1)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=62540756]
+transform = Transform3D(1.1300437, 0, 0, 0, 1.2010326, 0, 0, 0, 1.1253905, -5.142602, 0, -0.7076453)
+mesh = SubResource("CylinderMesh_75rjn")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=1117232796]
+transform = Transform3D(12.044232, 0, 0, 0, 4.6229415, 0, 0, 0, 3.0626004, -2.365747, 0, -4.0247593)
+mesh = SubResource("PrismMesh_upoyc")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=1231576294]
+transform = Transform3D(0.30414647, 0, 0, 0, 0.3322197, 0, 0, 0, 0.31108588, -4.786564, 2.6517413, -4.005337)
+mesh = SubResource("SphereMesh_6sf10")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=53635129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3900146, -0.49175704, -1.0854492)
+shape = SubResource("BoxShape3D_g8808")
+
+[node name="CharacterBody3D" parent="." unique_id=1679335475 instance=ExtResource("1_wjef0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0011423, 0)
+
+[node name="Node3D" parent="." unique_id=129411959 instance=ExtResource("2_6rjn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4502368, 0.5355637, -3.8395472)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=132093538]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.7473407, 3.6331434, -1.5880974e-07)
+
+[node name="Control" type="Control" parent="." unique_id=57826057]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=1204801321]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 80
+text = "saves"
+
+[node name="Button" type="Button" parent="Control" unique_id=1006693068]
+layout_mode = 0
+offset_top = 204.0
+offset_right = 294.0
+offset_bottom = 322.0
+theme_override_font_sizes/font_size = 80
+text = "save 01"
+script = ExtResource("3_6rjn1")
+
+[node name="Label2" type="Label" parent="Control" unique_id=403228217]
+layout_mode = 0
+offset_top = 372.0
+offset_right = 103.0
+offset_bottom = 395.0
+text = "no more yet. "
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
