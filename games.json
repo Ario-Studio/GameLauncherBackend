@@ -1,0 +1,9 @@
+[
+  {
+    "id": "game1",
+    "name": "My First Game",
+    "version": "1.0",
+    "exe": "Game.exe",
+    "downloadUrl": "https://raw.githubusercontent.com/USERNAME/REPO/main/games/game1.zip"
+  }
+]
