@@ -1,9 +1,79 @@
 [
   {
-    "id": "game1",
-    "name": "My First Game",
-    "version": "1.0",
-    "exe": "Game.exe",
-    "downloadUrl": "https://github.com/Ario-Studio/GameLauncherBackend/blob/main/alpha-prototype.zip"
+    "id": "RootsOfMonster",
+    "name": "Roots of Monster",
+    "version": "1.0.0",
+    "exe": "RootsOfMonster.exe",
+    "downloadUrl": "https://example.com/downloads/RootsOfMonster.zip",
+    "installPath": "C:\\GameLauncher\\Games\\RootsOfMonster",
+    "playTime": 0.0,
+    "installed": false,
+    "coverImage": "/Assets/game1.jpg"
+  },
+  {
+    "id": "RedStarRescue",
+    "name": "Red Star: Rescue",
+    "version": "1.0.0",
+    "exe": "RedStarRescue.exe",
+    "downloadUrl": "https://example.com/downloads/RedStarRescue.zip",
+    "installPath": "C:\\GameLauncher\\Games\\RedStarRescue",
+    "playTime": 0.0,
+    "installed": false,
+    "coverImage": "/Assets/game2.jpg"
+  },
+  {
+    "id": "CyberDrift",
+    "name": "Cyber Drift",
+    "version": "1.0.0",
+    "exe": "CyberDrift.exe",
+    "downloadUrl": "https://example.com/downloads/CyberDrift.zip",
+    "installPath": "C:\\GameLauncher\\Games\\CyberDrift",
+    "playTime": 0.0,
+    "installed": false,
+    "coverImage": "/Assets/game3.jpg"
+  },
+  {
+    "id": "NeonWarfare",
+    "name": "Neon Warfare",
+    "version": "1.0.0",
+    "exe": "NeonWarfare.exe",
+    "downloadUrl": "https://example.com/downloads/NeonWarfare.zip",
+    "installPath": "C:\\GameLauncher\\Games\\NeonWarfare",
+    "playTime": 0.0,
+    "installed": false,
+    "coverImage": "/Assets/game4.jpg"
+  },
+  {
+    "id": "SkyRaiders",
+    "name": "Sky Raiders",
+    "version": "1.0.0",
+    "exe": "SkyRaiders.exe",
+    "downloadUrl": "https://example.com/downloads/SkyRaiders.zip",
+    "installPath": "C:\\GameLauncher\\Games\\SkyRaiders",
+    "playTime": 0.0,
+    "installed": false,
+    "coverImage": "/Assets/game5.jpg"
+  },
+  {
+    "id": "VoidHunters",
+    "name": "Void Hunters",
+    "version": "1.0.0",
+    "exe": "VoidHunters.exe",
+    "downloadUrl": "https://example.com/downloads/VoidHunters.zip",
+    "installPath": "C:\\GameLauncher\\Games\\VoidHunters",
+    "playTime": 0.0,
+    "installed": false,
+    "coverImage": "/Assets/game6.jpg"
+  },
+  {
+    "id": "IronProtocol",
+    "name": "Iron Protocol",
+    "version": "1.0.0",
+    "exe": "IronProtocol.exe",
+    "downloadUrl": "https://example.com/downloads/IronProtocol.zip",
+    "installPath": "C:\\GameLauncher\\Games\\IronProtocol",
+    "playTime": 0.0,
+    "installed": false,
+    "coverImage": "/Assets/game7.jpg"
   }
 ]
