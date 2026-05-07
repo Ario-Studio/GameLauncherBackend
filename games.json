@@ -4,9 +4,7 @@
     "name": "Roots of Monster",
     "version": "1.0.0",
     "exe": "RootsOfMonster.exe",
-    "downloadUrl": "https://github.com/Ario-Studio/GameLauncherBackend/releases/download/v1.0/alpha-prototype.zip
-
-",
+    "downloadUrl": "https://github.com/Ario-Studio/GameLauncherBackend/releases/download/v1.0/alpha-prototype.zip",
     "installPath": "C:\\GameLauncher\\Games\\RootsOfMonster",
     "playTime": 0.0,
     "installed": false,
